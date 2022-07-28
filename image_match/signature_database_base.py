@@ -52,7 +52,7 @@ class SignatureDatabaseBase(object):
                    before applying the matching strategy
 
                 For example:
-                    { "term": {  "metadata.category": "art" } }
+                    { "term": {  "image.metadata.category": "art" } }
 
         Returns:
             a formatted list of dicts representing matches.
@@ -436,7 +436,7 @@ def words_to_int(word_array):
     coding_vector = 3**np.arange(width)
 
     # The 'plus one' here makes all digits positive, so that the
-    # integer represntation is strictly non-negative and unique
+    # integer representation is strictly non-negative and unique
     return np.dot(word_array + 1, coding_vector)
 
 
